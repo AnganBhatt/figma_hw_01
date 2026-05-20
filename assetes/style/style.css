@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #18191F;
+}
+body{
+    background-color: #F5F7FA;
+    font-family: "Inter", sans-serif;
+}
+nav{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        background-color: #F5F7FA;
+}
+
+.container{
+    max-width: 1152px;
+    margin: auto;
+}
+
+.img-link{
+    display: inline-block;
+}
+
+.image img{
+    max-height: 40px; 
+    width: auto;    
+    display: block;
+}
+.menu-bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-list .list-name{
+    display: inline-block;
+}
+.menu-list .list-name.home{
+    font-weight: 500;
+}
+.menu-list .list-name .list-link{
+    display: inline-block;
+    padding: 30px 25px;
+    line-height: 150%;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+    position: relative;
+}
+.menu-list .list-name .list-link:hover{
+    color:#4CAF4F ;
+}
+.menu-list .list-name .list-link::before{
+    content: "";
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    transition: 0.3s ease;
+    background-color: #4CAF4F;
+}
+.menu-list .list-name .list-link:hover::before{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}
+.button a:nth-child(1){
+    padding: 10px 20px;
+    transition: 0.2s ease;
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+.button a:nth-child(1):hover{
+    border-radius: 6px;
+    color: #4CAF4F;
+    border: 2px solid #4CAF4F;
+}
+.button a:nth-child(2){
+    padding: 10px 20px;
+    background-color: #4CAF4F;
+    color: white;
+    border-radius: 6px;
+     transition: 0.2s ease;
+     border: 2px solid transparent;
+}
+.button a:nth-child(2):hover{
+    background-color: transparent;
+    color: #4CAF4F;
+    border: 2px solid #4CAF4F;
+}
