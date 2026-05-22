@@ -13,44 +13,56 @@ a {
     text-decoration: none;
     color: #18191F;
 }
-body{
-    background-color: #F5F7FA;
+
+body {
     font-family: "Inter", sans-serif;
+    background-color: #F5F7FA;
 }
-nav{
+
+nav {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        background-color: #F5F7FA;
+    background-color: #F5F7FA;
+    z-index: 100;
+    top: 0px;
+    position: sticky;
 }
 
-.container{
-    max-width: 1440px;
+nav .container {
+    height: 84px;
+}
+
+.container {
+    max-width: 1152px;
     margin: auto;
-    height: 84px
 }
 
-.img-link{
+.img-link {
     display: inline-block;
 }
 
-.image img{
-    max-height: 40px; 
-    width: auto;    
+.image img {
+    max-height: 40px;
+    width: auto;
     display: block;
 }
-.menu-bar{
+
+.row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.menu-list .list-name{
+.menu-list .list-name {
     display: inline-block;
 }
-.menu-list .list-name.home{
+
+.menu-list .list-name.home {
     font-weight: 500;
+    color: #18191F;
 }
-.menu-list .list-name .list-link{
+
+.menu-list .list-name .list-link {
     display: inline-block;
     padding: 30px 25px;
     line-height: 150%;
@@ -59,10 +71,12 @@ nav{
     text-transform: capitalize;
     position: relative;
 }
-.menu-list .list-name .list-link:hover{
-    color:#4CAF4F ;
+
+.menu-list .list-name .list-link:hover {
+    color: #4CAF4F;
 }
-.menu-list .list-name .list-link::before{
+
+.menu-list .list-name .list-link::before {
     content: "";
     width: 0%;
     height: 3px;
@@ -74,32 +88,133 @@ nav{
     transition: 0.3s ease;
     background-color: #4CAF4F;
 }
-.menu-list .list-name .list-link:hover::before{
+
+.menu-list .list-name .list-link:hover::before {
     opacity: 1;
     visibility: visible;
     width: 100%;
 }
-.button a:nth-child(1){
+
+.button a:nth-child(1) {
     padding: 10px 20px;
     transition: 0.2s ease;
     background-color: transparent;
     border: 2px solid transparent;
 }
-.button a:nth-child(1):hover{
+
+.button a:nth-child(1):hover {
     border-radius: 6px;
     color: #4CAF4F;
     border: 2px solid #4CAF4F;
 }
-.button a:nth-child(2){
+
+.button a:nth-child(2) {
     padding: 10px 20px;
     background-color: #4CAF4F;
     color: white;
     border-radius: 6px;
-     transition: 0.2s ease;
-     border: 2px solid transparent;
+    transition: 0.2s ease;
+    border: 2px solid transparent;
 }
-.button a:nth-child(2):hover{
+
+.button a:nth-child(2):hover {
     background-color: transparent;
     color: #4CAF4F;
     border: 2px solid #4CAF4F;
+}
+
+/*                                                 hero section                                                        */
+
+.hero {
+    padding: 96px;
+    background: #f5f7fa;
+}
+
+.about h2 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 119%;
+    color: #4d4d4d;
+}
+
+.about h2 span {
+    color: #4caf4f;
+}
+
+.about p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #717171;
+}
+
+.about .reg {
+    margin-top: 32px;
+    display: inline-block;
+}
+
+.about .reg {
+    margin-top: 32px;
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #4caf4f;
+    border: 2px solid #4caf4f;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+
+.about .reg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: #4caf4f;
+    z-index: -1;
+    transition: left 0.3s ease;
+}
+
+
+.about .reg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: #4caf4f;
+    z-index: -1;
+    transition: right 0.3s ease;
+}
+
+
+.about .reg:hover::before {
+    left: 0;
+}
+
+.about .reg:hover::after {
+    right: 0;
+}
+
+.about .reg:hover {
+    color: #F5F7FA;
+}
+
+.service-img {
+    text-align: right;
+}
+
+.service-img img {
+    display: block;
+    max-width: 100%;
+}
+
+.mobile-menu {
+    display: none;
 }
